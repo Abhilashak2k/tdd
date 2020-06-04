@@ -3,6 +3,7 @@ package co.interleap.courses.tdd;
 public class VowelCounter {
 	
 	private int vowelCount=0;
+	private char[] charList = {'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'};
 	
 	public int countVowels(String st) {
 		
@@ -13,8 +14,11 @@ public class VowelCounter {
 		else {
 			for(char i : st.toCharArray()) {
 				
-				if(i == 'a' || i == 'e' || i == 'i' || i == 'o' || i == 'u' ) {
-					vowelCount++;
+				for(char j : charList) {
+					if(i==j) {
+						vowelCount++;
+						break;
+					}
 				}
 				
 			}
