@@ -9,4 +9,9 @@ public class VowelCounterTest {
     public void shouldCountZeroWithAnEmptyString(){
         assertEquals(0, new VowelCounter().countVowels(""));
     }
+	
+	@Test
+	public void shouldCountOneWithSingleVowel() {
+		assertEquals(1, new VowelCounter().countVowels("a"));
+	}
 }
